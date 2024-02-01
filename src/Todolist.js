@@ -1,11 +1,14 @@
 import React from 'react'
+import Todocard from './Todocard'
 
-const Todolist = () => {
+const Todolist = ({Tododata}) => {
+    console.log('sd',Tododata)
   return (
-    
-              <div class="tasks"></div>
-
-    
+   <>
+    {
+      Tododata.map((el)=>(<Todocard  el={el}  />))
+    }
+    </>
   )
 }
 
